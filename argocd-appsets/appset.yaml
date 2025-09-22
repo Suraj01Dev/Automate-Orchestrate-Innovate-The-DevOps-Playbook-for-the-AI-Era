@@ -5,17 +5,17 @@ metadata:
 spec:
   generators:
     - git:
-        repoURL: 'https://github.com/your-org/your-repo.git'
+        repoURL: 'https://github.com/Suraj01Dev/Automate-Orchestrate-Innovate-The-DevOps-Playbook-for-the-AI-Era.git'
         revision: HEAD
         directories:
-          - path: policies/*
+          - path: iam_policies/*
   template:
     metadata:
       name: '{{path.basename}}-iam'
     spec:
       project: default
       source:
-        repoURL: 'https://github.com/your-org/your-repo.git'
+        repoURL: 'https://github.com/Suraj01Dev/Automate-Orchestrate-Innovate-The-DevOps-Playbook-for-the-AI-Era.git'
         targetRevision: HEAD
         chart: iam-charts
         helm:
