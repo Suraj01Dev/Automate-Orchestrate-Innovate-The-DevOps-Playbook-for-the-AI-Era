@@ -1,0 +1,16 @@
+# Common files and directories to ignore
+.git/
+.github/
+.gitignore
+.idea/
+.vscode/
+
+# Common OS/editor files
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Dependency directories
+node_modules/
+vendor/
