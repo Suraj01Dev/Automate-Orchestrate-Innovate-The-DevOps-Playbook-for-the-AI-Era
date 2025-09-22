@@ -1,0 +1,21 @@
+apiVersion: iam.crossplane.io/v1
+kind: Xiam
+metadata:
+  name: microsvc1
+spec:
+  permissions:
+    - type: microsvcpolicy1
+      policyDocument: |
+        {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Effect": "Allow",
+                    "Action": [
+                        "secretsmanager:GetSecretValue",
+                        "secretsmanager:DescribeSecret"
+                    ],
+                    "Resource": "*"
+                }
+            ]
+        }

@@ -1,0 +1,6 @@
+apiVersion: meta.pkg.crossplane.io/v1beta1
+kind: Function
+metadata:
+  name: function-iam
+spec:
+  package: xpkg.crossplane.io/negz/function-xbuckets:v0.1.0

@@ -1,0 +1,15 @@
+apiVersion: iam.crossplane.io/v1
+kind: Xiam
+metadata:
+  name: {{ .Values.serviceName | lower }}
+spec:
+  trustpolicies:
+    - type: microservice
+      policy:
+        permissions:
+{{- range $path, $_ := .Files.Glob (printf "%s/*.json" .Values.policiesFolder) }}
+{{- $filename := base $path }}
+{{- $policyName := trimSuffix ".json" $filename }}
+          - type: {{ $policyName | lower }}
+            policyDocument: {{ $.Files.Get $path | fromJson | toJson | quote }}
+{{- end }}
