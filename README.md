@@ -1,6 +1,6 @@
 # Microservices Charts
 
-`iam.yaml` is a Helm-templated version of the Crossplane claim from the provided repository. The Helm chart only requires two inputs: `serviceName` and `policiesFolder`.
+`iam.yaml` is a Helm-templated version of the Crossplane claim from this [repository](https://github.com/Suraj01Dev/crossplane-iam-function). The Helm chart only requires two inputs: `serviceName` and `policiesFolder`.
 
 To demonstrate, we can run the `helm template` command with these inputs:
 
